@@ -34,7 +34,7 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 [params.copyright]
 prefix = ""
 holder = "Nikola Janjusevic"
-startYear = "2017"
+startYear = "2020"
 suffix = ""
 
 [params.settings]
@@ -110,7 +110,7 @@ defaultMarkdownHandler = "goldmark"
 			autoHeadingID = true
 		[markup.goldmark.renderer]
 			hardWraps = false
-			unsafe = false
+			unsafe = true
 			xHTML = false
 	[markup.highlight]
 		codeFences = true
