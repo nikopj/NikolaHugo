@@ -1,9 +1,71 @@
 ---
 title: "My auto-reload setup for writing LATEX documents in VIM"
-date: 2020-01-03T01:17:30-05:00
+date: 2021-01-17
 draft: false
+toc: true
 ---
+## (Update) January 17th 2021
+It's a new year, and I've been using a new workflow for writing my LATEX
+documents in Vim.  One frustratation I had with my previous set up (see below)
+was the complicated nature of having automatic reloading using Firefox as my PDF
+viewer. Also, sometimes I don't want to open such a power hungry app just to
+view a PDF. So I now use [Zathura](https://pwmt.org/projects/zathura/), a
+minmial PDF viewer with customizable keyboard shortcuts (e.x. Vim key-bindings
+for moving around) that can be continously updated by the compiler ``latexmk``,
 
+```bash
+$ latexmk -pdf -pvc report.tex
+```
+
+The `-pvc` option allows for continuous previewing, which compiles the tex file
+at each write. As you could guess, `-pdf` option compiles the file to
+`report.pdf`. With the continous previewing, we want to keep `latexmk` command
+running. It's useful to keep it in a separate terminal (don't push it to the
+background) as it will show us any warnings and compilation errors. When these
+happen, we can acknowledge the error with `Ctrl-D`, which tells `latexmk` to
+try compile the next file write. 
+
+We can open the PDF file via the terminal with,
+
+```bash
+$ zathura report.pdf --fork
+```
+
+The fork option allows us to close terminal. Alternatively, we can set Zathura
+to our default PDF viewer in our `~/.bashrc` via `$ export READER=zathura`.
+
+### REALLY setting your default viewer
+However, not all programs look at your environment variables to open files. A
+more widely used option is with the
+[`xdg-open`](https://man.archlinux.org/man/xdg-open.1) command, which your
+computer will call by default when openning a file. There have been written many
+versions of this command. I've found
+[mimi](https://github.com/march-linux/mimi), which seems to have most easily
+configurable `xdg-open` "mime-types". Replace your default `xdg-open` with the one in
+the mimi repository (or add `xdg-open` to another fold with greater precedence
+in your `$PATH` variable). You can then make Zathura, or any other program, you
+default PDF viewer with the line `application/pdf: zathura` in the
+mimi configuration file, `~/.config/mimi/mime.conf`.
+
+### Zathura options
+Zathura looks for a configuration file called `~/.config/zathura/zathurarc`.
+I set some options like making zooming in and out easier and more:
+```
+map K zoom in
+map J zoom out
+map u scroll half-up
+map d scroll half-down
+map r reload
+map R rotate
+set selection-clipboard clipboard
+```
+Many many more options are available and can be found in the
+[`zathurarc`](http://manpages.ubuntu.com/manpages/trusty/man5/zathurarc.5.html) man
+page.
+
+
+
+## January 3rd 2020
 I'm so happy with my current LATEX workflow that I want to share it. It is actually 
 quite a niche problem that it's solving because it's born out of using VIM as my 
 editor (a command-line editor) and Firefox as my PDF viewer. I enjoy VIM as its keyboard 
@@ -75,7 +137,7 @@ to continuously listen for any file changes to ``report.tex`` and run our ``relo
 The following line in bash does the trick:
 
 ```bash
-ls report.tex | entr -ps 'latexmk -pdf report.tex; ./reload'
+$ ls report.tex | entr -ps 'latexmk -pdf report.tex; ./reload'
 ```
 
 ``ls`` lists information about ``report.tex`` and is piped into ``entr`` 
