@@ -63,7 +63,9 @@ Many many more options are available and can be found in the
 [`zathurarc`](http://manpages.ubuntu.com/manpages/trusty/man5/zathurarc.5.html) man
 page.
 
-
+--------------------------
+--------------------------
+--------------------------
 
 ## January 3rd 2020
 I'm so happy with my current LATEX workflow that I want to share it. It is actually 

@@ -4,6 +4,7 @@ date: 2021-01-17
 draft: false
 katex: false
 toc: false
+comments: false
 ---
 
 <img src="/dcdl/cdlnet_blockdiagram.png" alt="CDLNet Block Diagram" width="1500" align="middle"> 
@@ -41,7 +42,7 @@ class and generalization requirements at hand.
 ## Recent Progress
 - *In January 2021*, we will be presenting updated results regarding truly
   competitive denoising performance against state-of-the-art deep-learning
-  models and leveraging the interpretability of CDLNet improve generalization in
+  models and leveraging the interpretability of CDLNet to improve generalization in
   blind denoising. Our poster will be available
   [here](/dcdl/CDLNetPosterWireless21.pdf).
 - *In April 2020*, we presented some preliminary results at the NYU Wireless

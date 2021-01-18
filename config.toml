@@ -8,7 +8,7 @@ theme = "minimo"
 disqusShortname = ""
 googleAnalytics = ""
 
-Paginate = 5
+Paginate = 10
 preserveTaxonomyNames = true
 
 enableRobotsTXT = true # generate robots.txt
@@ -47,7 +47,7 @@ hideEntryMeta = false #["pages"] # boolean / array of sections
 showReadingTime = true
 showLastmod = true
 taxonomyCloudShuffle = true
-accentColor = "#ffcd00"
+accentColor = "#44d62c" # "#ffcd00"
 hideMainMenu = true
 rtl = false
 
@@ -70,7 +70,18 @@ github = "nikopj"
 linkedin = "nikola-janjušević-554204157"
 
 [params.comments]
-enable = false
+enable = true
+
+# Utterances: https://utteranc.es
+[params.comments.utterances]
+enable = true
+issueTerm = "pathname" # pathname / url / title / og:title / <string>
+label = ""
+theme = "github-light"
+
+[params.comments.utterances.github]
+username = "nikopj"
+repository = "nikopj.github.io"
 
 [permalinks]
 page = "/:slug/"
