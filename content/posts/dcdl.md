@@ -1,6 +1,6 @@
 ---
 title: "Deep Convolutional Dictionary Learning for Image Restoration"
-date: 2021-01-17
+date: 2021-03-08
 draft: false
 katex: false
 toc: false
@@ -40,10 +40,15 @@ class and generalization requirements at hand.
 - [Amir Khalilian](https://amirhkhalilian.github.io/), Ph.D. student
 
 ## Recent Progress
-- *In January 2021*, we will be presenting updated results regarding truly
+- *In March 2021*, we submitted to the EUSIPCO 2021 conference. We demonstrate
+  that CDLNet's interpretable construction may be leveraged to yeild denoising robustness
+  in noise-level mismatch between training and inference. The sumbission is
+  currently under review but may be viewed here:
+  [https://arxiv.org/abs/2103.04779](https://arxiv.org/abs/2103.04779).
+- *In January 2021*, we presented updated results regarding 
   competitive denoising performance against state-of-the-art deep-learning
   models and leveraging the interpretability of CDLNet to improve generalization in
-  blind denoising. Our poster will be available
+  blind denoising. Our poster is available
   [here](/dcdl/CDLNetPosterWireless21.pdf).
 - *In April 2020*, we presented some preliminary results at the NYU Wireless
 Industrial Affiliates Board Meeting. Check out our poster

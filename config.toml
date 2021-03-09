@@ -33,7 +33,7 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
 prefix = ""
-holder = "Nikola Janjusevic"
+holder = "Nikola Janjušević"
 startYear = "2020"
 suffix = ""
 
@@ -47,7 +47,7 @@ hideEntryMeta = false #["pages"] # boolean / array of sections
 showReadingTime = true
 showLastmod = true
 taxonomyCloudShuffle = true
-accentColor = "#44d62c" # "#ffcd00"
+accentColor = "#1EB100" #"#ffcd00" #"#44d62c"
 hideMainMenu = true
 rtl = false
 

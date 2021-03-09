@@ -1,5 +1,5 @@
 ---
-title: "Staying Organized While Doing Research (arxivmv)."
+title: "Staying organized while doing research (arxivmv)."
 date: 2020-10-25
 draft: false
 katex: false
