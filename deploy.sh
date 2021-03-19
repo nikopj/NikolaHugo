@@ -1,5 +1,9 @@
 #!/bin/sh
 
+cd themes/minimo
+sass src/stylesheets/style.scss static/assets/css/main.ab98e12b.css
+cd ../..
+
 # if a command fails then deploy stops
 set -e
 
